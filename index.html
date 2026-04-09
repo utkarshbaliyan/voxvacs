@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOXVACS | Future Biotech</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="cursor" id="cursor"></div>
+
+    <nav>
+        <div class="logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" style="cursor: pointer;">VOXVACS</div>
+        <div class="nav-links">
+            <a href="#vision">Vision</a>
+            <a href="#team">Team</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact us</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="grid-bg"></div>
+        <h1>Bio-Digital<br>Evolution</h1>
+        <p>Redefining Tissue Engineering & Regenerative Medicine.</p>
+        <button class="cta-btn" onclick="document.getElementById('services').scrollIntoView()">Explore The Lab</button>
+    </section>
+
+    <section class="vision" id="vision">
+        <h2 class="section-title">Our Vision</h2>
+        <div class="vision-wrapper">
+            <div class="vision-content">
+                <p>At Voxvacs, we believe the next generation of biotechnology will come from bringing disciplines together, not keeping them apart. Preservation science, biomaterials, bioprinting, and computational biology are often treated as separate fields. We see them as parts of one larger system for building meaningful regenerative solutions.</p>
+                
+                <p>Our vision is to create a company that can connect these capabilities in a way that is scientifically strong, commercially practical, and built for long-term impact. We want Voxvacs to be a place where research can move with greater speed, where ideas can be developed with more depth, and where innovation can be translated more effectively into products, partnerships, and real applications.</p>
+                
+                <p>Founded in India with a global outlook, Voxvacs is built on the belief that high-quality biotechnology can be both ambitious and efficient. We want to contribute to a future where regenerative innovation is more connected, more scalable, and more accessible to the people and institutions building what comes next.</p>
+                
+                <p>Over time, our aim is for Voxvacs to become more than a biotech company. We want it to become a platform that helps enable the future of biological innovation itself.</p>
+            </div>
+            <div class="vision-visual">
+                <video class="vision-video" autoplay muted loop playsinline>
+                    <source src="images/4887912-uhd_4096_2160_25fps.mp4" type="video/mp4">
+                </video>
+                <div class="vision-overlay"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <h2 class="section-title">Services</h2>
+        <div class="card-container">
+            <div class="card" onclick="openModal('bioink-modal')">
+                <h3>Bioink Engineering</h3>
+                <p>High-fidelity biocompatible materials designed for 3D bioprinting. We create the scaffolding for the future of organ regeneration.</p>
+            </div>
+
+            <div class="card" onclick="openModal('bioinformatics-modal')">
+                <h3>Bioinformatics</h3>
+                <p>Decoding the code of life. We use advanced algorithms and scRNA-seq analysis to visualize and predict cellular behavior.</p>
+            </div>
+
+            <div class="card" onclick="openModal('lyophilization-modal')">
+                <h3>Lyophilization</h3>
+                <p>Next-gen preservation. Stabilizing biological structures at the molecular level for transport and long-term viability.</p>
+            </div>
+
+            <div class="card" onclick="openModal('lens-modal')">
+                <h3>Biomaterial Lenses</h3>
+                <p>The future of vision. Developing ocular solutions that merge organic tissue with synthetic durability.</p>
+            </div>
+        </div>
+
+        <!-- Modals -->
+        <div id="bioink-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('bioink-modal')">&times;</span>
+                <h2>Bioink Engineering</h2>
+                <ul>
+                    <li>Custom bioinks and 3D bioprinting workflows for layer‑by‑layer construction of patient‑specific tissue scaffolds that mimic the extracellular matrix.</li>
+                    <li>Skin, cartilage, bone, and organ patch applications.</li>
+                    <li>Burn wound and cardiac tissue repair models.</li>
+                    <li>Orthopedic reconstruction and bone healing systems.</li>
+                    <li>Drug testing and screening platforms.</li>
+                    <li>Business opportunities include formulation licensing, contract bioprinting, and equipment partnerships.</li>
+                </ul>
+                <a href="#contact" class="modal-link" onclick="closeModal('bioink-modal')">Co‑develop a bioink →</a>
+            </div>
+        </div>
+
+        <div id="bioinformatics-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('bioinformatics-modal')">&times;</span>
+                <h2>Bioinformatics Hub</h2>
+                <ul>
+                    <li>Data mining, molecular docking, dynamics simulations, and research consultation to power drug discovery and advanced analytics.</li>
+                    <li>Biomedical literature and genomics data mining.</li>
+                    <li>Molecular simulation for target–ligand analysis.</li>
+                    <li>Study design, data analysis, and reporting.</li>
+                    <li>Lead optimization for drug discovery pipelines.</li>
+                    <li>Models: project‑based consulting, subscription software, training, and long‑term partnerships.</li>
+                </ul>
+                <a href="#contact" class="modal-link" onclick="closeModal('bioinformatics-modal')">Launch a bioinformatics project →</a>
+            </div>
+        </div>
+
+        <div id="lyophilization-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('lyophilization-modal')">&times;</span>
+                <h2>Lyophilization Studio</h2>
+                <ul>
+                    <li>Extended shelf life for cells, seeds, probiotics, vaccines, and enzymes with room‑temperature storage and preserved biological activity.</li>
+                    <li>Seed preservation for AgriTech and seed banks.</li>
+                    <li>Probiotic and microbial culture stabilization.</li>
+                    <li>Vaccine, enzyme, and reagent preservation.</li>
+                    <li>Research and diagnostic sample services.</li>
+                    <li>Revenue model: contract freeze‑drying, equipment rental/lease, custom protocol development, and technology licensing.</li>
+                </ul>
+                <a href="#contact" class="modal-link" onclick="closeModal('lyophilization-modal')">Book lyophilization pilot →</a>
+            </div>
+        </div>
+
+        <div id="lens-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('lens-modal')">&times;</span>
+                <h2>Biomaterial Lens Forge</h2>
+                <ul>
+                    <li>Biocompatible lenses engineered to restore and protect corneal tissue from environmental damage and degenerative conditions.</li>
+                    <li>Seamless tissue integration and long‑term biocompatibility.</li>
+                    <li>Reduced corneal scarring and enhanced visual clarity.</li>
+                    <li>Targeting burn victims, keratoconus, dystrophy, and post‑surgical cases.</li>
+                    <li>Future revenue: device sales, surgical partnerships, licensing to ophthalmology chains, and research collaborations.</li>
+                </ul>
+                <a href="#contact" class="modal-link" onclick="closeModal('lens-modal')">Explore lens collaborations →</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="team" id="team">
+        <h2 class="section-title">Our Team</h2>
+        <div class="team-container">
+            <div class="team-member">
+                <div class="member-avatar">👨‍�</div>
+                <h3>Nishant Tyagi</h3>
+                <p class="member-role">CEO & Co-founder</p>
+                <p class="member-bio">Visionary leader driving the integration of biotechnology disciplines and scaling biotech innovation globally.</p>
+            </div>
+            <div class="team-member">
+                <div class="member-avatar">👨‍🔬</div>
+                <h3>Dr. Rajesh Kumar</h3>
+                <p class="member-role">Chief Scientific Officer</p>
+                <p class="member-bio">Leading bioprinting research with 15+ years in tissue engineering.</p>
+            </div>
+            <div class="team-member">
+                <div class="member-avatar">👨‍💻</div>
+                <h3>Arjun Patel</h3>
+                <p class="member-role">Head of Bioinformatics</p>
+                <p class="member-bio">Pioneering data-driven solutions in molecular simulation and genomics.</p>
+            </div>
+            <div class="team-member">
+                <div class="member-avatar">👩‍🔬</div>
+                <h3>Dr. Maya Desai</h3>
+                <p class="member-role">Director of Operations</p>
+                <p class="member-bio">Scaling biotech solutions from lab to market with precision and vision.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="section-title">Collaborate</h2>
+        <div class="contact-content">
+            <div class="contact-form-wrapper">
+                <div class="form-header">
+                    <h3>Start something with Voxvacs</h3>
+                    <p>Whether you are a student, founder, researcher, or investor, tell us what you want to build and we will help architect the science behind it.</p>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="you@domain.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="organization">Organization / Affiliation</label>
+                        <input type="text" id="organization" placeholder="Startup, lab, institute, or individual">
+                    </div>
+                    <div class="form-group">
+                        <label for="interest">I am interested in</label>
+                        <select id="interest">
+                            <option>Select a platform</option>
+                            <option>Bioink Engineering</option>
+                            <option>Bioinformatics Hub</option>
+                            <option>Lyophilization Studio</option>
+                            <option>Biomaterial Lens Forge</option>
+                            <option>General Inquiry</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Project idea / question</label>
+                        <textarea id="message" rows="6" placeholder="Describe what you want to build, your timeline, and how we can help."></textarea>
+                    </div>
+                    <button class="cta-btn" type="button">Send to Voxvacs →</button>
+                </form>
+            </div>
+            <div class="contact-sidebar">
+                <div class="contact-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.5849419278354!2d77.07856!3d28.572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3c5c5c5c5c5%3A0x5c5c5c5c5c5c5c5c!2sINMAS%2C%20DRDO%2C%20Delhi!5e0!3m2!1sen!2sin!4v1234567890" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="info-box">
+                    <h4>Quick links</h4>
+                    <ul>
+                        <li>Email: <a href="mailto:contact@voxvacs.com">contact@voxvacs.com</a></li>
+                        <li>Location: India-based with global collaborations</li>
+                        <li>Open to: pharma, CROs, startups, academics</li>
+                    </ul>
+                    <div class="contact-detail-quick">
+                        <h5>Primary Contact</h5>
+                        <p><strong>Dr. Rajesh Kumar</strong> - CSO</p>
+                        <p>INMAS, DRDO, Delhi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 VOXVACS BIOTECH. Voxel & Vessel Systems. All rights reserved.</p>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+
+</body>
+</html>
