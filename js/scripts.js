@@ -56,3 +56,34 @@ window.addEventListener('click', (event) => {
         }
     });
 });
+
+// Contact form -> draft email to querycell@voxvacs.com
+(() => {
+    const form = document.querySelector('.contact-form');
+    const submitBtn = document.getElementById('contact-submit');
+    if (!form || !submitBtn) return;
+
+    submitBtn.addEventListener('click', () => {
+        const name = document.getElementById('name')?.value?.trim() ?? '';
+        const email = document.getElementById('email')?.value?.trim() ?? '';
+        const organization = document.getElementById('organization')?.value?.trim() ?? '';
+        const interest = document.getElementById('interest')?.value?.trim() ?? '';
+        const message = document.getElementById('message')?.value?.trim() ?? '';
+
+        const safeInterest = interest && interest !== 'Select a platform' ? interest : 'General Inquiry';
+        const subject = `Voxvacs inquiry — ${safeInterest}`;
+
+        const bodyLines = [
+            `Name: ${name || '-'}`,
+            `Email: ${email || '-'}`,
+            `Organization / Affiliation: ${organization || '-'}`,
+            `Interest: ${safeInterest || '-'}`,
+            '',
+            'Project idea / question:',
+            message || '-',
+        ];
+
+        const mailto = `mailto:querycell@voxvacs.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join('\n'))}`;
+        window.location.href = mailto;
+    });
+})();
